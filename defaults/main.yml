@@ -1,4 +1,8 @@
 ---
+
+statsflow_artifact: qbroker-1.2.2.jar
+statsflow_security_plugin: qbroker-security-1.0.0.jar
+statsflow_logdir: /var/log/qbroker
 statsflow_db_name: metricdb
 statsflow_log_location:
   service: stats
@@ -20,6 +24,6 @@ statsflow_jar_files:
   - commons-io-1.4.jar
   - commons-net-3.3.jar
   - jakarta-oro-2.0.8.jar
-  - jms.jar
+  - jms-1.1.jar
   - log4j-1.2.12.jar
-  - qbroker-1.2.1.jar
+  - "{{statsflow_artifact}}"

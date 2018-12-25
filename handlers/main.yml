@@ -1,0 +1,6 @@
+---
+- name: Restart_statsflow
+  systemd:
+    name: "{{role_name}}"
+    enabled: yes
+    state: restarted
