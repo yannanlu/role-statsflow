@@ -1,10 +1,6 @@
 ---
-qbroker_service_id: STATS
-qbroker_artifact: "{{statsflow_artifact}}"
 qbroker_security_plugin: "{{statsflow_security_plugin}}"
 qbroker_logdir: "{{statsflow_logdir}}"
-qbroker_jar_files: "{{statsflow_jar_files}}"
-qbroker_json_files: "{{statsflow_json_files}}"
 
 influxdb_db_name: "{{statsflow_db_name}}"
 

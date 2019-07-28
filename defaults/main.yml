@@ -1,6 +1,6 @@
 ---
-
-statsflow_artifact: qbroker-1.2.2.jar
+statsflow_service_id: STATS
+statsflow_artifact: qbroker-1.2.4.jar
 statsflow_security_plugin: qbroker-security-1.0.0.jar
 statsflow_logdir: /var/log/qbroker
 statsflow_db_name: metricdb

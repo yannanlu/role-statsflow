@@ -1,15 +1,20 @@
 ---
 - include: ../../qbroker/tasks/flow.yml
+  vars:
+    service_id: "{{statsflow_service_id}}"
+    my_artifact: "{{statsflow_artifact}}"
+    my_jar_files: "{{statsflow_jar_files}}"
+    my_json_files: "{{statsflow_json_files}}"
 
 - name: Template of Flow.json
   template:
     src: Flow.json.j2
-    dest: "{{qbroker_dir}}/flow/{{qbroker_service_id}}/Flow.json"
+    dest: "{{qbroker_dir}}/flow/{{statsflow_service_id}}/Flow.json"
     owner: "{{qbroker_user}}"
     group: "{{qbroker_group}}"
     mode: 0664
   vars:
-    id: "{{qbroker_service_id}}"
+    id: "{{statsflow_service_id}}"
     qb_dir: "{{qbroker_dir}}"
     log_dir: "{{qbroker_logdir}}"
   notify: "Restart_{{role_name}}"
@@ -17,7 +22,7 @@
 - name: Template of rpt_global_var.json
   template:
     src: rpt_global_var.json.j2
-    dest: "{{qbroker_dir}}/flow/{{qbroker_service_id}}/rpt_global_var.json"
+    dest: "{{qbroker_dir}}/flow/{{statsflow_service_id}}/rpt_global_var.json"
     owner: "{{qbroker_user}}"
     group: "{{qbroker_group}}"
     mode: 0664
