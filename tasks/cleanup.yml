@@ -5,3 +5,5 @@
   with_items:
     - "flow/{{statsflow_service_id}}"
     - "jndi/{{statsflow_service_id}}"
+    - "bin/QFlow_{{statsflow_service_id}}.sh"
+    - "init.d/S50QFlow_{{statsflow_service_id}}"
